@@ -22,7 +22,7 @@ public class rotate : MonoBehaviour
         transform.Rotate(0f, 0f, rotationSpeed * Time.deltaTime);
 
         // Move between left and right
-        { transform.position = Vector3.MoveTowards(transform.position, targetPosition, sawspeed * Time.deltaTime);
+        while(true){ transform.position = Vector3.MoveTowards(transform.position, targetPosition, sawspeed * Time.deltaTime);
         targetPosition = ltrans.transform.position;
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, sawspeed * Time.deltaTime);
         targetPosition = rtrans.transform.position; }
