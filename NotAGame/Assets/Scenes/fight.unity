@@ -1465,9 +1465,9 @@ MonoBehaviour:
   macesp2: {fileID: 923874600}
   macesp3: {fileID: 955195503}
   cannonPrefab: {fileID: 8490910103671093990, guid: e9e78d27c91d1f14ca949a8fe09bd63f, type: 3}
-  sawPrefab: {fileID: 6040810853045504976, guid: b8da3cf08deda9b499aa20e8fec4df9f, type: 3}
+  sawPrefab: {fileID: 6040810853045504976, guid: 38c5374f2c57ec84aaa62354fcb78be1, type: 3}
   fallingObjectPrefab: {fileID: 1819010425955763974, guid: c628199b6b9266244b586466f073b78e, type: 3}
-  macePrefab: {fileID: 6135200621310016890, guid: 31943d972d1f75946a3f785603346dc9, type: 3}
+  macePrefab: {fileID: 6135200621310016890, guid: 604c358f7df509845a2705671a69708b, type: 3}
   spawnInterval: 2
 --- !u!4 &1067888005
 Transform:

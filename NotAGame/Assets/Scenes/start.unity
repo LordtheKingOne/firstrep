@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 253834906}
   - component: {fileID: 253834905}
   - component: {fileID: 253834904}
-  - component: {fileID: 253834903}
+  - component: {fileID: 253834907}
   m_Layer: 5
   m_Name: startButton
   m_TagString: Untagged
@@ -256,22 +256,6 @@ RectTransform:
   m_AnchoredPosition: {x: 426, y: 121}
   m_SizeDelta: {x: 740, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &253834903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 253834901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e32710ae60acfc246926ead40cb04982, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startButton: {fileID: 253834904}
-  buttonRect: {fileID: 0}
-  targetSceneName: fight
-  moveInterval: 0.1
 --- !u!114 &253834904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,6 +338,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 253834901}
   m_CullTransparentMesh: 1
+--- !u!114 &253834907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253834901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb7178c15f7190419d95aff68906520, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startButton: {fileID: 253834904}
+  buttonRect: {fileID: 0}
+  targetSceneName: fight
+  moveInterval: 0.05
 --- !u!1 &555704388
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,7 +630,7 @@ GameObject:
   - component: {fileID: 1502140086}
   - component: {fileID: 1502140085}
   - component: {fileID: 1502140084}
-  - component: {fileID: 1502140083}
+  - component: {fileID: 1502140087}
   m_Layer: 5
   m_Name: almanac
   m_TagString: Untagged
@@ -657,20 +657,6 @@ RectTransform:
   m_AnchoredPosition: {x: 759, y: -314}
   m_SizeDelta: {x: 131.6305, y: 88.4458}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1502140083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1502140081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d25c6d0fce4dc834cbf305e6ddcd899d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  almanac: {fileID: 1502140084}
-  targetSceneName: almanac
 --- !u!114 &1502140084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -753,6 +739,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1502140081}
   m_CullTransparentMesh: 1
+--- !u!114 &1502140087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502140081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 531a30158a52e204090eaa0b38b25a33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  almanac: {fileID: 1502140084}
+  targetSceneName: almanac
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

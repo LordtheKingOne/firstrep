@@ -265,7 +265,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 253834901}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e32710ae60acfc246926ead40cb04982, type: 3}
+  m_Script: {fileID: 11500000, guid: ffb7178c15f7190419d95aff68906520, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   startButton: {fileID: 253834904}
@@ -666,7 +666,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1502140081}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d25c6d0fce4dc834cbf305e6ddcd899d, type: 3}
+  m_Script: {fileID: 11500000, guid: 531a30158a52e204090eaa0b38b25a33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   almanac: {fileID: 1502140084}
