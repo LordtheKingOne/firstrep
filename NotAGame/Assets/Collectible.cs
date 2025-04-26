@@ -6,7 +6,7 @@ public class Collectible : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            ScoreManager.Instance.AddPoint();
+            FindAnyObjectByType<ScoreManager>().AddPoint();
             Destroy(gameObject); // Remove collectible after touching player
         }
     }
