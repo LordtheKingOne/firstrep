@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI; // Only needed if you want to show score on screen
 
 public class ScoreManager : MonoBehaviour
@@ -8,20 +9,19 @@ public class ScoreManager : MonoBehaviour
 
     public int currentScore = 0;
     public TextMeshProUGUI scoreText; // Optional: assign a UI Text to show score
-
+    PlayerMovement2D PlayerMovement2D;
     private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject); // Optional: keep score across scenes
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        PlayerMovement2D = FindAnyObjectByType<PlayerMovement2D>();
     }
 
+    public void Update()
+    {
+        if (PlayerMovement2D == null)
+        {
+            SceneManager.LoadScene("fight");
+        }
+    }
     public void AddPoint()
     {
         currentScore++;

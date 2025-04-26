@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 3756522429958481270}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.02, y: 0, z: 0}
+  m_LocalPosition: {x: -8, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -56,7 +56,7 @@ Transform:
   m_GameObject: {fileID: 5522914411336095128}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.02, y: 0, z: 0}
+  m_LocalPosition: {x: 8, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -177,7 +177,7 @@ MonoBehaviour:
   pointA: {fileID: 4451611976529321741}
   pointB: {fileID: 6514527645545119603}
   speed: 3
-  life: 7
+  life: 12
 --- !u!1 &6357550182040273993
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,7 +254,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -5889849262404765700, guid: ae5327dec2811c54da756c4c32ea3885, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -280,4 +280,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: -540
   sawspeed: 5
-  lifeTime: 5
+  lifeTime: 10
