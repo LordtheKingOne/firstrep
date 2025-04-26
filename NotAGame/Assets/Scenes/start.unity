@@ -4172,6 +4172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e357a81f5e8996041be1f51c2b609ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allButtons: []
 --- !u!114 &1311313332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5082,7 +5083,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4482667283255105389, guid: cff3c96fc160a784e97039fa84fbd0b8, type: 3}
       propertyPath: m_Name
-      value: Button (16)
+      value: Button (16
       objectReference: {fileID: 0}
     - target: {fileID: 9076470922278426430, guid: cff3c96fc160a784e97039fa84fbd0b8, type: 3}
       propertyPath: m_Pivot.x
