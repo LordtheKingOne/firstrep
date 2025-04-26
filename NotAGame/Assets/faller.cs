@@ -14,13 +14,13 @@ public class faller : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // You can replace this with your own death logic
+            // Kill the player
             Debug.Log("Player hit by bullet!");
-            Destroy(other.gameObject); // or trigger death animation
+            Destroy(other.gameObject); // or call player death function
+            Destroy(gameObject); // destroy bullet after hitting player
         }
-
-        // Destroy bullet on any collision
-        Destroy(gameObject);
+        // else do nothing — bullet just flies through other things
     }
-    
+
+
 }

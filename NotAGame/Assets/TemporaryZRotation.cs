@@ -9,8 +9,8 @@ public class PeriodicZRotation : MonoBehaviour
 
     private void Start()
     {
-        unstableDuration = Random.Range(2f, 5f);
-        interval = Random.Range(15f, 35f);
+        unstableDuration = 3f;
+        interval = 20f;
 
         if (rb == null) rb = GetComponent<Rigidbody2D>();
         StartCoroutine(RotationCycle());

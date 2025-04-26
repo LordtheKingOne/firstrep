@@ -11,7 +11,6 @@ public class ThreatSpawner : MonoBehaviour
     public Transform cannonsp4;
     public Transform cannonsp5;
     public Transform cannonsp6;
-    public Transform heatersp;
     public Transform sawsp;
     public Transform fallersp1;
     public Transform fallersp2;
@@ -23,12 +22,12 @@ public class ThreatSpawner : MonoBehaviour
 
     [Header("Threat Prefabs")]
     public GameObject cannonPrefab;
-    public GameObject heaterPrefab;
+    
     public GameObject sawPrefab;
     public GameObject fallingObjectPrefab;
     public GameObject macePrefab;
 
-    public float spawnInterval = 5f;
+    public float spawnInterval = 10f;
 
     private List<Transform> cannonSPs = new List<Transform>();
     private List<Transform> fallerSPs = new List<Transform>();
@@ -36,6 +35,12 @@ public class ThreatSpawner : MonoBehaviour
 
     private List<GameObject> allThreats = new List<GameObject>();
 
+    
+
+    void Update()
+    {
+       
+    }
     void Start()
     {
         // Add all spawn points to the list
@@ -56,7 +61,7 @@ public class ThreatSpawner : MonoBehaviour
 
         // Add all threats to the list
         allThreats.Add(cannonPrefab);
-        allThreats.Add(heaterPrefab);
+        
         allThreats.Add(sawPrefab);
         allThreats.Add(fallingObjectPrefab);
         allThreats.Add(macePrefab);
@@ -75,7 +80,16 @@ public class ThreatSpawner : MonoBehaviour
 
             Transform selectedSpawnPoint = GetSpawnPointForThreat(selectedThreat);
 
-            Instantiate(selectedThreat, selectedSpawnPoint.position, Quaternion.identity);
+            if (selectedThreat == fallingObjectPrefab)
+            {
+                Instantiate(selectedThreat, selectedSpawnPoint.position, Quaternion.Euler(0f, 0f, 180f));
+            }
+            else
+            {
+                Instantiate(selectedThreat, selectedSpawnPoint.position, Quaternion.identity);
+            }
+
+
         }
     }
 
@@ -86,11 +100,7 @@ public class ThreatSpawner : MonoBehaviour
             // Only allow cannon-specific spawn points
             return cannonSPs[Random.Range(0, cannonSPs.Count)];
         }
-        else if(threat == heaterPrefab)   
-        {
-            
-            return heatersp;
-        }
+        
         else if (threat == sawPrefab)
         {
 

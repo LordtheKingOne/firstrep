@@ -6,7 +6,7 @@ public class DangerZone : MonoBehaviour
     public float detectionRadius = 2f;
     public float timeToKill = 4f;
 
-    private float timer = 0f;
+    public float timer = 0f;
 
     void Update()
     {

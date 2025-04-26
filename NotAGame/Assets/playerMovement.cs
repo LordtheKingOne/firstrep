@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class PlayerMovement2D : MonoBehaviour
 {
+    public Animator anima;
+
     [Header("Movement")]
     public float moveSpeed = 5f;
     public float jumpForce = 12f;
@@ -25,6 +27,21 @@ public class PlayerMovement2D : MonoBehaviour
     {
         // Get left/right input
         moveInput = Input.GetAxisRaw("Horizontal");
+        if (moveInput > 0)
+        {
+            anima.SetBool("RUN", true);
+            transform.localScale = new Vector3(0.8f, 0.8f, 1f);
+        }
+        if (moveInput < 0)
+        {
+            anima.SetBool("RUN", true);
+            transform.localScale = new Vector3(-0.8f, 0.8f, 1f);
+        }
+        if (moveInput == 0)
+        {
+            anima.SetBool("RUN", false);
+            
+        }
 
         // Jump
         if (Input.GetButtonDown("Jump") && isGrounded)
