@@ -6,20 +6,16 @@ public class Bullet : MonoBehaviour
 
     private void Start()
     {
-        Destroy(gameObject, lifeTime);
+        Destroy(gameObject, lifeTime); // Bullet destroys itself after some time
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            // You can replace this with your own death logic
             Debug.Log("Player hit by bullet!");
             Destroy(other.gameObject); // or trigger death animation
+            Destroy(gameObject); // destroy bullet ONLY when it hits the player
         }
-
-        // Destroy bullet on any collision
-        Destroy(gameObject);
     }
 }
-

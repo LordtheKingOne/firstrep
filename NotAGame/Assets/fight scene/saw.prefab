@@ -73,8 +73,8 @@ GameObject:
   - component: {fileID: 1855896594722974650}
   - component: {fileID: 5608950460860409947}
   - component: {fileID: 1296851919447373922}
-  - component: {fileID: 505732763925791703}
   - component: {fileID: 7810083823607687012}
+  - component: {fileID: 572535823903240535}
   m_Layer: 0
   m_Name: saw
   m_TagString: Untagged
@@ -190,23 +190,6 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
---- !u!114 &505732763925791703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6040810853045504976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 961fcb02a328c30448f73fc10a237a57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationSpeed: 540
-  ltrans: {fileID: 3756522429958481270}
-  rtrans: {fileID: 5522914411336095128}
-  sawspeed: 1.02
-  lifeTime: 15
 --- !u!50 &7810083823607687012
 Rigidbody2D:
   serializedVersion: 5
@@ -234,3 +217,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &572535823903240535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6040810853045504976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ae86a29b3fe8b418220cc240c071c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
