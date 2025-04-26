@@ -1,5 +1,6 @@
 using UnityEngine;
 
+
 public class PlayerMovement2D : MonoBehaviour
 {
     [Header("Movement")]
@@ -29,6 +30,7 @@ public class PlayerMovement2D : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+
         }
     }
 
