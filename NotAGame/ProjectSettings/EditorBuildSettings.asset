@@ -5,8 +5,17 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/arena.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/start.unity
+    guid: 8cf5882a2ac802e489a90a2b1d91353d
+  - enabled: 1
+    path: Assets/Scenes/fight.unity
+    guid: ff0f7dbf00031074f9f3956de9e79540
+  - enabled: 1
+    path: Assets/Scenes/almanac.unity
+    guid: 86d09afa5b5a1ee4787069669a3bc4b9
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
