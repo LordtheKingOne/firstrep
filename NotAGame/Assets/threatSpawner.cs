@@ -8,9 +8,7 @@ public class ThreatSpawner : MonoBehaviour
     public Transform cannonsp1;
     public Transform cannonsp2;
     public Transform cannonsp3;
-    public Transform cannonsp4;
-    public Transform cannonsp5;
-    public Transform cannonsp6;
+
     public Transform sawsp;
     public Transform fallersp1;
     public Transform fallersp2;
@@ -47,9 +45,7 @@ public class ThreatSpawner : MonoBehaviour
         cannonSPs.Add(cannonsp1);
         cannonSPs.Add(cannonsp2);
         cannonSPs.Add(cannonsp3);
-        cannonSPs.Add(cannonsp4);
-        cannonSPs.Add(cannonsp5);
-        cannonSPs.Add(cannonsp6);
+
         fallerSPs.Add(fallersp1);
         fallerSPs.Add(fallersp2);
         fallerSPs.Add(fallersp3);
