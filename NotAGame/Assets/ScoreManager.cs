@@ -9,41 +9,47 @@ public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager Instance;
 
-    public SpriteRenderer sprit;
-    public Sprite newspriteee;
+    
 
     public int currentScore = 0;
-    public TextMeshProUGUI scoreText; // Optional: assign a UI Text to show score
+    public int hscore;
+
+    public TextMeshProUGUI scoreText; 
+    public TextMeshProUGUI hscoreText;
+
     PlayerMovement2D PlayerMovement2D;
     private void Awake()
     {
         PlayerMovement2D = FindAnyObjectByType<PlayerMovement2D>();
         
     }
-
+    private void Start()
+    {
+        hscore = PlayerPrefs.GetInt("Highscore");
+    }
     public void Update()
     {
+        hscoreText.text = hscore.ToString();
+        if (currentScore > hscore)
+        {
+            PlayerPrefs.SetInt("Highscore", currentScore);
+        }
+
         if (PlayerMovement2D == null)
-        {   
-            sprit.sprite = newspriteee;
-            StartCoroutine(MyCoroutine());
+        {     
             SceneManager.LoadScene("fight");
         }
     }
    
-    IEnumerator MyCoroutine(){
+      
     
-        yield return new WaitForSeconds(3); // wait for 3 seconds used with unity.collections
-        
-    }
-
     public void AddPoint()
     {
         currentScore++;
 
         if (scoreText != null)
         {
-            scoreText.text = "Score: " + currentScore;
+            scoreText.text =  currentScore.ToString();
         }
     }
 }

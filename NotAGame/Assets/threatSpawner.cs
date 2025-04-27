@@ -21,7 +21,6 @@ public class ThreatSpawner : MonoBehaviour
 
     [Header("Threat Prefabs")]
     public GameObject cannonPrefab;
-    
     public GameObject sawPrefab;
     public GameObject fallingObjectPrefab;
     public GameObject macePrefab;
@@ -31,29 +30,44 @@ public class ThreatSpawner : MonoBehaviour
 
     public float spawnInterval = 3f;
 
+    [SerializeField] AudioSource levelup;
+    public AudioClip nextlevel;
+
+
     private List<Transform> cannonSPs = new List<Transform>();
     private List<Transform> fallerSPs = new List<Transform>();
     private List<Transform> maceSPs = new List<Transform>();
 
     private List<GameObject> allThreats = new List<GameObject>();
 
-    
+
+
+    int previousLevel = 0; // Track last level
+    int level = 0;
 
     void Update()
     {
-        
-            points = scoreM.currentScore;
+        points = scoreM.currentScore;
 
-            // Calculate how many "5 point" steps
-            int level = points / 5;
+        // Calculate current level
+        level = points / 5;
 
-        // Each level reduces spawnInterval by 0.2f
+        // If level increased
+        if (level > previousLevel)
+        {
+            previousLevel = level;
+            // Play level-up sound here
+            levelup.Play();
+            Debug.Log("Leveled Up to: " + level);
+        }
+
+        // Adjust spawnInterval
         spawnInterval = Mathf.Max(1f, 2.6f - (level * 0.2f));
-        
-
     }
+
     void Start()
     {
+        levelup.clip = nextlevel;
         // Add all spawn points to the list
         cannonSPs.Add(cannonsp1);
         cannonSPs.Add(cannonsp2);

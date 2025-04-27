@@ -136,3 +136,4 @@ MonoBehaviour:
   firePoint: {fileID: 7416821841678816821}
   fireInterval: 5
   bulletForce: 10
+  lifetime: 10

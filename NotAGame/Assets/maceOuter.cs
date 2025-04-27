@@ -27,8 +27,7 @@ public class MaceOuter : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // You can replace this with your own death logic
-            Debug.Log("Player hit by mace!");
+           
             StartCoroutine(MyCoroutine1());
             Destroy(other.gameObject); // or trigger death animation
         }

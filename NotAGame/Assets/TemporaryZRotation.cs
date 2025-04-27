@@ -4,13 +4,13 @@ public class PeriodicZRotation : MonoBehaviour
 {
     public Rigidbody2D rb;
     
-    public float unstableDuration;
-    public float interval;
+    public float unstableDuration = 3f;
+    public float interval = 5f;
 
     private void Start()
     {
-        unstableDuration = 3f;
-        interval = 20f;
+        
+        
 
         if (rb == null) rb = GetComponent<Rigidbody2D>();
         StartCoroutine(RotationCycle());

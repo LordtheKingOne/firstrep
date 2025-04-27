@@ -1,4 +1,6 @@
 using UnityEngine;
+using Unity.Collections;
+using System.Collections;
 
 public class Saw : MonoBehaviour
 {
@@ -29,12 +31,17 @@ public class Saw : MonoBehaviour
             currentTarget = currentTarget == pointA ? pointB : pointA;
         }
     }
+    IEnumerator MyCoroutine1()
+    {
+        yield return new WaitForSeconds(3);
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Player killed by saw!");
+            
+            StartCoroutine(MyCoroutine1());
             Destroy(other.gameObject); // or call your death animation
         }
     }

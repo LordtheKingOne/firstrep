@@ -6,10 +6,12 @@ public class CannonShooter : MonoBehaviour
     public Transform firePoint;
     public float fireInterval = 5f;
     public float bulletForce = 10f;
+    public int lifetime = 2;
 
     private void Start()
     {
         InvokeRepeating(nameof(FireBullet), 0f, fireInterval);
+        Destroy(gameObject, lifetime); //  Destroy cannon after lifetime seconds
     }
 
     void FireBullet()
@@ -22,3 +24,10 @@ public class CannonShooter : MonoBehaviour
         }
     }
 }
+
+
+
+
+    
+
+   
