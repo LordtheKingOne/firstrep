@@ -1,4 +1,6 @@
 using UnityEngine;
+using Unity.Collections;
+using System.Collections;
 
 public class MaceOuter : MonoBehaviour
 {
@@ -16,6 +18,10 @@ public class MaceOuter : MonoBehaviour
     {
         Destroy(gameObject, lifeTimeMace);
     }
+    IEnumerator MyCoroutine1()
+    {
+        yield return new WaitForSeconds(3);
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -23,6 +29,7 @@ public class MaceOuter : MonoBehaviour
         {
             // You can replace this with your own death logic
             Debug.Log("Player hit by mace!");
+            StartCoroutine(MyCoroutine1());
             Destroy(other.gameObject); // or trigger death animation
         }
 

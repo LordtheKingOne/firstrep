@@ -5,7 +5,7 @@ public class rotate : MonoBehaviour
     public float rotationSpeed = 90f; // degrees per second
     
     public float sawspeed = 5f;
-    public float lifeTime = 5f;
+    public float lifeTime = 12f;
 
     private Vector3 targetPosition;
 

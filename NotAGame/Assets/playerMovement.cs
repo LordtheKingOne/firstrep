@@ -43,22 +43,45 @@ public class PlayerMovement2D : MonoBehaviour
         if (moveInput == 0)
         {
             anima.SetBool("RUN", false);
-            
+            waitingg += Time.deltaTime;
         }
-        waitingg += Time.deltaTime;
+        
+        if(waitingg < 2f)
+        {
+            anima.SetBool("LONG", false);
+        }
         if(waitingg > 2f)
         {
-            anima.SetTrigger("LONG");
-            waitingg = 0f;
-            anima.ResetTrigger("LONG");
+            anima.SetBool("LONG",true);
+            
+            
         }
         // Jump
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            anima.SetBool("UP",true );
 
         }
-        
+        if (!isGrounded)
+        {
+            if (rb.linearVelocity.y > 0.1f)
+            {
+                anima.SetBool("UP", true);
+                anima.SetBool("DOWN", false);
+            }
+            else if (rb.linearVelocity.y < -0.1f)
+            {
+                anima.SetBool("UP", false);
+                anima.SetBool("DOWN", true);
+            }
+        }
+        else
+        {
+            anima.SetBool("UP", false);
+            anima.SetBool("DOWN", false);
+        }
+
 
     }
 

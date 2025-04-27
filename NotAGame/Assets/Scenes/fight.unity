@@ -518,7 +518,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 100
-  m_Sprite: {fileID: 583417684835264956, guid: ae5327dec2811c54da756c4c32ea3885, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -526,7 +526,7 @@ SpriteRenderer:
   m_Size: {x: 9, y: 0.75}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &320756031
@@ -1468,7 +1468,8 @@ MonoBehaviour:
   sawPrefab: {fileID: 6040810853045504976, guid: 38c5374f2c57ec84aaa62354fcb78be1, type: 3}
   fallingObjectPrefab: {fileID: 1819010425955763974, guid: c628199b6b9266244b586466f073b78e, type: 3}
   macePrefab: {fileID: 6135200621310016890, guid: 604c358f7df509845a2705671a69708b, type: 3}
-  spawnInterval: 2
+  scoreM: {fileID: 336213980}
+  spawnInterval: 2.6
 --- !u!4 &1067888005
 Transform:
   m_ObjectHideFlags: 0

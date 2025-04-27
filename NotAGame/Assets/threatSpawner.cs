@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UIElements;
 
 public class ThreatSpawner : MonoBehaviour
 {
@@ -25,7 +26,10 @@ public class ThreatSpawner : MonoBehaviour
     public GameObject fallingObjectPrefab;
     public GameObject macePrefab;
 
-    public float spawnInterval = 10f;
+    public ScoreManager scoreM;
+    private int points;
+
+    public float spawnInterval = 3f;
 
     private List<Transform> cannonSPs = new List<Transform>();
     private List<Transform> fallerSPs = new List<Transform>();
@@ -37,7 +41,16 @@ public class ThreatSpawner : MonoBehaviour
 
     void Update()
     {
-       
+        
+            points = scoreM.currentScore;
+
+            // Calculate how many "5 point" steps
+            int level = points / 5;
+
+        // Each level reduces spawnInterval by 0.2f
+        spawnInterval = Mathf.Max(1f, 2.6f - (level * 0.2f));
+        
+
     }
     void Start()
     {
@@ -65,11 +78,12 @@ public class ThreatSpawner : MonoBehaviour
         // Start the spawn loop
         StartCoroutine(SpawnThreats());
     }
+    //scoreM.currentScore = points, make spawn interval shorter every 5 points by 0.2 at level 10 interval will be 1
 
     IEnumerator SpawnThreats()
     {
         while (true)
-        {
+        {   
             yield return new WaitForSeconds(spawnInterval);
 
             GameObject selectedThreat = allThreats[Random.Range(0, allThreats.Count)];
